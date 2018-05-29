@@ -109,7 +109,6 @@ $(document).ready(function(){
 			<ul>
 				<li><a href="../info/Qna">QnA</a></li>
 				<li><a href="../info/Notice">Notice</a></li>
-				<li><a href="../info/About">About us</a></li>
 			</ul>
 		</li>
 
