@@ -32,8 +32,7 @@
 
 
   <div class="site__container">
-<p class="text--center">* 비밀번호는 영대소문자, 숫자조합으로 7자 이상 20자 이하입니다<br>
-회원 탈퇴를 위해 기존비밀번호를 입력해주세요.</p>
+<p class="text--center">* 비밀번호는 영대소문자, 숫자조합으로 7자 이상 20자 이하입니다</p>
     <div class="grid__container">
 
 
