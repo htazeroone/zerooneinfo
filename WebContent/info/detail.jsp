@@ -263,7 +263,7 @@ function rehide(){
 				<c:when test="${data.pname==pname||pname=='admin' }">
 					<td align="left">
 						<a href="Modify?id=${data.id }&kind=${data.kind }&page=${page}">수정</a>
-						<a href="Delete?id=${data.id }&kind=${data.kind}">삭제</a>
+						<a href="Delete?id=${data.id }&kind=${data.kind}&page=${page}">삭제</a>
 					</td>
 					<td colspan="9"></td>
 				</c:when>

@@ -30,7 +30,7 @@ public class ModifyReg implements Action{
 		dao.modify(vo);
 		
 		data.setRedirect(true);
-		data.setPath("Detail?id="+id);
+		data.setPath("Detail?id="+id+"&page="+request.getParameter("page"));
 
 		dao.close();
 		

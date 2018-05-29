@@ -24,7 +24,7 @@ public class Delete implements Action{
 		String kind = request.getParameter("kind");
 		
 		
-		data.setPath("List?kind="+kind);
+		data.setPath("List?kind="+kind+"&page="+request.getParameter("page"));
 		
 		data.setRedirect(true);
 		
