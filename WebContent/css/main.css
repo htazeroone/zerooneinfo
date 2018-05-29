@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.tot {
+	margin: 10px auto;
+	width: 750px;
+	height: 480px;
+	padding: 50px;
+	border: 1px solid white;
+}
+
+.big {
+	position: relative;
+	width: 750px;
+	height: 480px;
+	background-color: pink;
+	float: left;
+	overflow: hidden;
+}
+
+#imgs {
+	left: 0px;
+	position: absolute;
+	width: 700%; /* 12개면 1300% */
+	height: 480px;
+	background-color: green;
+}
+
+img {
+	width: 750px;
+	height: 480px;
+	float: left;
+}

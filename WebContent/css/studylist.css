@@ -1,0 +1,151 @@
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    font-family:Arial, sans-serif;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background: lightgrey -38px top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background: orange -57px top no-repeat;
+}
+
+
+
+
+.new_list_item{
+	border: 1px solid #d6d6d6;
+	border-right-color: #b8b8b8;
+	border-bottom-color: #b8b8b8;
+	padding: 26px 15px 28px 15px;
+	cursor: pointer;
+}
+.new_list_item.filter_blind{
+	border:none;
+	padding: 0;
+	cursor: initial !important;
+}
+
+.new_list_left{
+	width: 65%;
+	padding-right: 5%;
+	vertical-align: bottom;
+}
+
+.new_list_sub{
+	padding-left: 20px;
+	width: 83%;
+	vertical-align: bottom;
+}
+.new_list_sub_top{
+	padding-bottom: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.new_list_cate{
+	color: #e54e40;
+}
+.red{
+	color: #e54e40 !important;
+}
+.new_list_sub_bot{
+	border-bottom: 1px solid #d6d6d6;
+	padding-bottom: 15px;
+}
+.new_list_id{
+	font-size: 12px;
+	padding-right:10px;
+	vertical-align: middle;
+}
+.new_list_count{
+	border-radius: 10px;
+	overflow: hidden;
+	text-align: center;
+	font-size: 12px;
+	padding: 3px 15px;
+	background-color: #f4f5f6;
+	vertical-align: middle;
+	color: #000;
+	margin-right:10px;
+}
+
+.new_list_bottm{
+	font-size: 12px;
+	padding-top: 10px;
+	padding-left: 10px;
+	height:52px;
+	display:inline-block;
+}
+.new_list_right{
+	vertical-align: top;
+	position: relative;
+}
+.new_list_right > div{
+	padding-top: 6px;
+}
+.new_list_right > div > .new_list_day,
+.new_list_right > div > .new_list_pay{
+	width: 170px;
+	padding: 9px 0;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 4px;
+	border:1px solid #ccc;
+	background-color: #fff;
+	color: #000;
+}
+.new_list_right div.new_list_pay{
+	border:1px solid #f4f5f6;
+	background-color: #f4f5f6;
+	font-weight: bold;
+}
+.new_list_right > div > .new_list_pay_twice{
+	width: 275px;
+	padding: 9px 0;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 4px;
+	border:1px solid #ccc;
+	background-color: #fff;
+	color: #000;
+}
+.new_list_right div.new_list_pay_twice{
+	border:1px solid #f4f5f6;
+	background-color: #f4f5f6;
+	font-weight: bold;
+}
+.inline{
+	display: inline-block;
+}
+
+
+.new_end .new_list_item{
+	padding: 0;
+}
+.new_end .new_list_img{
+	border-radius: 0;
+	vertical-align: middle;
+}
+.new_end .new_list_left{
+	vertical-align: middle;
+}
+.new_end .new_list_right{
+	vertical-align: middle;
+}
+.new_end .new_list_right > div > .new_list_day,
+.new_end .new_list_right > div > .new_list_pay {
+	width: 100px;
+}
+.new_end .new_list_right > div > .new_list_pay_twice {
+	width: 100px;
+}
