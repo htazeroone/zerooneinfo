@@ -23,7 +23,7 @@ public class Comreg implements Action{
 		vo.setTitle(request.getParameter("title"));
 		vo.setPname(request.getParameter("pname"));
 		vo.setContent(request.getParameter("content"));
-		
+		  
 		int id = dao.cominsert(vo);
 		
 		data.setRedirect(true);

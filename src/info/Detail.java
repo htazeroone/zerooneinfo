@@ -23,7 +23,6 @@ public class Detail implements Action {
 			dao.qncnt(id);
 		}
 
-		request.setAttribute("cnt", "no");
 		request.setAttribute("page", request.getParameter("page"));
 		request.setAttribute("data", dao.qdetail(id));
 		request.setAttribute("reply", dao.replylist(id));

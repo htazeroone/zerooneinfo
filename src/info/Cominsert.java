@@ -21,7 +21,7 @@ public class Cominsert implements Action{
 		
 		vo.setTitle("[답변]"+vo.getTitle());
 		vo.setContent("[답변]"+vo.getContent());
-		
+		  
 		
 		request.setAttribute("page", request.getParameter("page"));
 		request.setAttribute("data", vo);
