@@ -93,7 +93,7 @@ $(document).ready(function(){
 
 			</ul>
 		</li>
-		<li><a href="../quizbox/QuizMain">퀴즈</a>
+		<li><a href="#">퀴즈</a>
 			<ul>
 			<%
 				if(session.getAttribute("pname")!=null){
