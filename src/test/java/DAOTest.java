@@ -142,7 +142,7 @@ public class DAOTest {
 		VO res = dao.detail_Lecture(25);
 		dao.close();
 		
-		Assert.assertEquals(res, vo);
+		assertEquals(res, vo);
 		
 	}
 
