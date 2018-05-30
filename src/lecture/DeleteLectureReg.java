@@ -23,7 +23,7 @@ public class DeleteLectureReg implements Action{
 		
 		dao.close();
 
-		request.setAttribute("msg", "과목이 삭제됐습니다.");
+		request.setAttribute("msg", delSubject+"과목이 삭제됐습니다.");
 		request.setAttribute("url", "../main/Main");
 		request.setAttribute("main", "lecture/alert.jsp");
 		return new ActionData();
