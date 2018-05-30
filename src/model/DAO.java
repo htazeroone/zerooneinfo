@@ -2,6 +2,7 @@ package model;
 
 import java.io.File;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,7 +28,14 @@ public class DAO {
 			System.out.println(con);
 
 		} catch(Exception e) {
-			e.printStackTrace();
+			
+			try {
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
+				
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
 		}
 	}
 
@@ -298,7 +306,7 @@ public class DAO {
 				vo.setPname(rs.getString("PNAME"));
 				vo.setTitle(rs.getString("TITLE"));
 				vo.setContent(rs.getString("CONTENT"));
-
+				System.out.println(vo);
 				return vo;
 			}
 
