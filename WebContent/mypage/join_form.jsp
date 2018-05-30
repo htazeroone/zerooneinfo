@@ -11,13 +11,11 @@
 
 
 <script type="text/javascript">
-
             function SimpleConfirm(){
                 var frm = document.frm;
                 var pid = frm.pid;
                 var pw1 = frm.pw1;
                 var pw2 = frm.pw2;
-
                if(pid.value==''|| !(/^[a-zA-Z0-9]{7,20}$/.test(pid.value))){
                     swal('아이디', '아이디 규칙을 확인해주세요')
                     pid.value='';
@@ -32,7 +30,6 @@
                     pw1.focus();
                     return;
                 }
-
                 if(pw1.value!=pw2.value){
                 	swal('비밀번호', '비밀번호가 일치하지 않습니다.');
                     pw1.value='';
