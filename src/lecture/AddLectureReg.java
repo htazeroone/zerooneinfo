@@ -32,6 +32,9 @@ public class AddLectureReg implements Action {
 		DAO dao = new DAO();
 		dao.addNewLecture(boardName, chapterName);
 		dao.close();
+		request.setAttribute("msg", boardName+"과목을 신설했습니다");
+		request.setAttribute("url", "../main/Main");
+		request.setAttribute("main", "lecture/alert.jsp");
 		
 		return new ActionData();
 	}
