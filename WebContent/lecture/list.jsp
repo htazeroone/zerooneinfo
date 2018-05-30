@@ -56,7 +56,10 @@ table {
 		
 		</tr>
 		<tr>
-			<td>번호</td><td>제목</td><td>글쓴이</td><td>등록일</td><td>조회수</td><td>내 학습여부</td>
+			<td>번호</td><td>제목</td><td>글쓴이</td><td>등록일</td><td>조회수</td>
+			<c:if test="${sessionScope.pid != null and sessionScope.pid != 'admin'}">
+			<td>내 학습여부</td>
+			</c:if>
 		</tr>
 		
 	<c:choose>
@@ -79,7 +82,8 @@ table {
 				<td>${i.cnt}</td>
 				
 				<td>
-			<c:if test="${readList.size() != 0}">
+			<c:if test="${sessionScope.pid != null and sessionScope.pid != 'admin'}">
+				<c:if test="${readList.size() != 0 }">
 				
 					<c:forEach var="num" items="${readList }">
 						<c:choose>
@@ -90,7 +94,7 @@ table {
 						</c:otherwise>
 						</c:choose>
 					</c:forEach>
-				
+				</c:if>
 			</c:if>
 				</td>
 			</tr>

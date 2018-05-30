@@ -63,7 +63,7 @@
 			</td>
 		</tr>
 		
-		<c:if test="${sessionScope.pid != null }">
+		<c:if test="${sessionScope.pid != null and sessionScope.pid != 'admin'}">
 		<tr>
 			<td colspan="2" align="right">
 				<a href="Detail?pid=${sessionScope.pid }&id=${data.id }&page=${param.page }&head=${data.head}&subject=${param.subject}">학습완료 체크</a>
