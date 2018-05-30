@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/SemiQuiz/cssb/bootstrap.css">
 <script type="text/javascript" src="../../nse_files/js/HuskyEZCreator.js" charset="utf-8">
 </script>   
-<form name = "nse" action ="AddProblemReg" method="post" enctype="multipart/form-data">
+<form name = "nse" action ="AddProblemReg?num=${num}&page=${page }&subject=${subname }&chname=${chname}" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="page" value="${param.page }">
 	<input type="hidden" name="num" value="${num }">
 	<input type="hidden" name="subject" value="${subname }">
@@ -51,23 +51,23 @@
 		</tr>	
 		<tr>
 			<td>선택지 1</td>
-			<td><textarea name="s1" rows="1" cols="80"> </textarea></td>
+			<td><textarea name="s1" rows="1" cols="80">1. </textarea></td>
 		</tr>
 		<tr>
 			<td>선택지 2</td>
-			<td><textarea name="s2" rows="1" cols="80"> </textarea></td>
+			<td><textarea name="s2" rows="1" cols="80">2. </textarea></td>
 		</tr>
 		<tr>
 			<td>선택지 3</td>
-			<td><textarea name="s3" rows="1" cols="80"> </textarea></td>
+			<td><textarea name="s3" rows="1" cols="80">3. </textarea></td>
 		</tr>
 		<tr>
 			<td>선택지 4</td>
-			<td><textarea name="s4" rows="1" cols="80"> </textarea></td>
+			<td><textarea name="s4" rows="1" cols="80">4. </textarea></td>
 		</tr>
 		<tr>
 			<td>선택지 5</td>
-			<td><textarea name="s5" rows="1" cols="80"> </textarea></td>
+			<td><textarea name="s5" rows="1" cols="80">5. </textarea></td>
 		</tr>
 		<tr>
 			<td>정답</td>

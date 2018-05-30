@@ -17,16 +17,29 @@ public class AddProblemReg implements Action {
 		
 		DAO dao = new DAO();
 		Integer chid = Integer.parseInt(request.getParameter("num"));
+		String subject = request.getParameter("subject");
 		
 		int page = 1;
+		int limit = 4, pageLimit = 1;
+		int start = (page -1) * limit + 1;
+		int end = page*limit;
 		
+		int startPage = (page-1)/pageLimit*pageLimit + 1;
+		int endPage = startPage + pageLimit - 1;
+		
+		int total = dao.totalCount(chid);
+		
+		int totalPage = total/limit;
+		
+		if(total%limit!=0)
+			totalPage++;
+		
+		if(endPage>totalPage)
+			endPage = totalPage;
 		
 		if(request.getParameter("page")!=null && !request.getParameter("page").equals("")) {
 			page = Integer.parseInt(request.getParameter("page"));
 		}
-		
-		
-		
 		
 		VO vo = new VO();
 		vo.setChid(Integer.parseInt(request.getParameter("chid")));
@@ -37,25 +50,22 @@ public class AddProblemReg implements Action {
 		vo.setS4(request.getParameter("s4"));
 		vo.setS5(request.getParameter("s5"));
 		vo.setAnswer(request.getParameter("answer"));
-	
-		String subject = request.getParameter("subject");
+		dao.problem_insert(vo,subject);
+
+
 		request.setAttribute("page", page);
-		
-		
-		
+		request.setAttribute("start", start);
+		request.setAttribute("startPage", startPage);
+		request.setAttribute("endPage", endPage);
 		request.setAttribute("sub", dao.subject(subject));
 		request.setAttribute("subname", subject);
+		request.setAttribute("problem", dao.question(subject, chid, start, end));
 		request.setAttribute("num", request.getParameter("num"));
 		request.setAttribute("chname", request.getParameter("chname"));
 		request.setAttribute("menu", "quizmenu.jsp");
-	
-		
-		dao.problem_insert(vo,subject);
-		data.setRedirect(true);
-		data.setPath("QuizMain");
+		request.setAttribute("main1", "quizbox/problem.jsp");
 		
 		dao.close();
-		
 		return data;
 	}
 

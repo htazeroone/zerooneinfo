@@ -15,6 +15,7 @@ public class AddProblemForm implements Action {
 		ActionData data = new ActionData();
 		DAO dao = new DAO();
 		Integer chid = Integer.parseInt(request.getParameter("num"));
+		String subject = request.getParameter("subject");
 		
 		int page = 1;
 		
@@ -23,13 +24,7 @@ public class AddProblemForm implements Action {
 			page = Integer.parseInt(request.getParameter("page"));
 		}
 		
-		
-		
-		String subject = request.getParameter("subject");
 		request.setAttribute("page", page);
-		
-		
-		
 		request.setAttribute("sub", dao.subject(subject));
 		request.setAttribute("subname", subject);
 		request.setAttribute("num", request.getParameter("num"));

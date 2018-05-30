@@ -109,7 +109,7 @@ function ssQuiz(){
                         <div class="new_list_sub_bot">
                            <div class="new_list_id inline">정답률</div>
                            <div class="new_list_count inline">
-                              <strong>${in.correction/in.total*100 }%</strong>
+							<strong><fmt:formatNumber value="${in.correction/in.total*100 }" pattern=".0" />%</strong>
                            </div><br /><br />
                            
                            <c:choose>
@@ -269,7 +269,7 @@ function ssQuiz(){
                         <div class="new_list_sub_bot">
                            <div class="new_list_id inline">정답률</div>
                            <div class="new_list_count inline">
-                              <strong>${qq.correction/qq.total*100 }%</strong>
+							<strong><fmt:formatNumber value="${qq.correction/qq.total*100 }" pattern=".0" />%</strong>
                            </div><br /><br />
                            
                               <input type="radio" name="selection${qq.id }" value="1" id="${qq.s1 }">
