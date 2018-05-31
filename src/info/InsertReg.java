@@ -73,8 +73,8 @@ public class InsertReg implements Action{
 		String fileDo = filename.substring(0, pos);
 		String exp = filename.substring(pos);
 		
-		String path = request.getRealPath("up")+"\\"+request.getParameter("kind")+"\\";
-		//path = "C:\\Users\\JHTA\\git\\zeroone\\WebContent\\up\\"+request.getParameter("kind")+"\\";
+		/*String path = request.getRealPath("up")+"\\"+request.getParameter("kind")+"\\";*/
+		String path = "C:\\Users\\ShinSaeRom\\Desktop\\승진\\Semi Proj WorkSpace\\SemiQuiz\\WebContent\\up\\"+request.getParameter("kind")+"\\";
 		
 		int cnt=0;
 		File ff = new File(path+filename);

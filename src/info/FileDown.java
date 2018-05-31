@@ -14,9 +14,9 @@ public class FileDown implements Action{
 		// TODO Auto-generated method stub		
 		String filename = request.getParameter("file");
 		String kind = request.getParameter("kind");
-		String path = request.getRealPath("up")+"\\"+kind;
+		/*String path = request.getRealPath("up")+"\\"+kind;*/
 		System.out.println(request.getRealPath("up")+"\\"+kind);
-		//path = "C:\\Users\\JHTA\\git\\zeroone\\WebContent\\up\\"+kind;
+		String path = "C:\\Users\\ShinSaeRom\\Desktop\\승진\\Semi Proj WorkSpace\\SemiQuiz\\WebContent\\up\\"+kind;
 
 		try {
 

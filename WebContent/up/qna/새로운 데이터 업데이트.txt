@@ -1,0 +1,39 @@
+	//지아 -비밀번호 변경시 -- 기존비밀번호를 정확히 입력했는지 확인
+	public boolean pwChk(VO vo) {
+		sql = "select * from member where pid=? and pw=?";
+		System.out.println("pwChk() pid:"+vo.getPid());
+		System.out.println("pwChk() pw:"+vo.getPw());
+		try {
+			ptmt = con.prepareStatement(sql);
+			ptmt.setString(1, vo.getPid());
+			ptmt.setString(2, vo.getPw());
+			rs = ptmt.executeQuery();
+
+			if(rs.next()) {
+				System.out.println("기존 비밀번호를 정확히 입력함.");
+				return true;
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	//지아 -비밀번호 변경시 -- 새 비밀번호로 업데이트
+	public void pwUpdate(VO vo) {
+		sql = "update member set pw = ? where pid=?";
+		System.out.println("pwUpdate() pid:"+vo.getPid());
+		System.out.println("pwUpdate() pw:"+vo.getPw());
+		try {
+			ptmt = con.prepareStatement(sql);
+			ptmt.setString(1, vo.getPw());
+			ptmt.setString(2, vo.getPid());
+			ptmt.executeUpdate();
+			System.out.println("비밀번호 갱신완료");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}

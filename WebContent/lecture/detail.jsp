@@ -12,36 +12,36 @@
 }
 
 .kind {
-	width: 60px;
+	width : 60px;  
 	text-align:center;
-}
+}     
 
 </style>
 <div id="dd">
 	<table border="" style="width: 100%; height: 50%">
 		<tr>
-			<td class="kind">챕터</td>
+			<td class="kind" nowrap="nowrap">챕터</td>
 			<td>${chapName }</td>
 		</tr>
 		<tr>
-			<td class="kind">제목</td>
+			<td class="kind" nowrap="nowrap">제목</td>
 			<td>${data.title}</td>
 		</tr>
 		<tr>
-			<td class="kind">작성자</td>
+			<td class="kind" nowrap="nowrap">작성자</td>
 			<td>${data.pname}</td>
 		</tr>
 		<tr>
-			<td class="kind">등록일</td>
+			<td class="kind" nowrap="nowrap">등록일</td>
 			<td><fmt:formatDate value="${data.reg_date }" pattern="yyyy-MM-dd(E) HH:mm"/></td>
 		</tr>
 		<tr>
-			<td class="kind">조회수</td>
+			<td class="kind" nowrap="nowrap">조회수</td>
 			<td>${data.cnt}</td>
 		</tr>
 		
 		<tr>
-			<td class="kind">이론내용</td>
+			<td class="kind" nowrap="nowrap">이론내용</td>
 			<td>${data.content}</td>
 			
 		</tr>	

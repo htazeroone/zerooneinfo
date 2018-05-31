@@ -29,12 +29,12 @@
 	</c:choose>
 	<table class="table">
 		<tr>
-			<th>번호</th>
-			<th>제목</th>
-			<th>글쓴이</th>
-			<th>등록일</th>
-			<th>추천수</th>
-			<th>조회수</th>
+			<th nowrap="nowrap">번호</th>
+			<th nowrap="nowrap">제목</th>
+			<th nowrap="nowrap">글쓴이</th>
+			<th nowrap="nowrap">등록일</th>
+			<th nowrap="nowrap">추천수</th>
+			<th nowrap="nowrap">조회수</th>
 		</tr>
 		
 		<c:choose>
@@ -91,7 +91,7 @@
 					</c:choose>
 					
 					<td>${dd.pname}</td>
-					<td>${dd.reg_date}</td>
+					<td nowrap="nowrap">${dd.reg_date}</td>
 					<td>${dd.rec }</td>
 					<td>${dd.cnt}</td>
 		

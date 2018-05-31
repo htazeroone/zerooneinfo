@@ -17,32 +17,24 @@ public class Chapter implements Action{
 	ActionData data = new ActionData();
 	DAO dao = new DAO();
 	Integer chid = Integer.parseInt(request.getParameter("num"));
-	
+	String subject = request.getParameter("subject");
 	int page = 1;
 	int limit = 4, pageLimit = 1;
-	
 	if(request.getParameter("page")!=null && !request.getParameter("page").equals("")) {
 		page = Integer.parseInt(request.getParameter("page"));
 	}
-	
 	int start = (page -1) * limit + 1;
 	int end = page*limit;
 	System.out.println(end - start);
-	
 	int startPage = (page-1)/pageLimit*pageLimit + 1;
 	int endPage = startPage + pageLimit - 1;
-	
 	int total = dao.totalCount(chid);
-	
 	int totalPage = total/limit;
-	
 	if(total%limit!=0)
 		totalPage++;
-	
 	if(endPage>totalPage)
 		endPage = totalPage;
 	
-	String subject = request.getParameter("subject");
 	request.setAttribute("page", page);
 	request.setAttribute("start", start);
 	request.setAttribute("startPage", startPage);
@@ -60,3 +52,6 @@ public class Chapter implements Action{
 	return data;
 	}	
 }
+
+
+
